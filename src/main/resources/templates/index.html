@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Htmx Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" >
+    <script src="https://unpkg.com/htmx.org@2.0.1"></script>
+</head>
+<body>
+<main class="container">
+    <section>
+        <h1>Htmx Demo</h1>
+        <div id="parent-div"></div>
+        <button hx-post="/clicked"
+                hx-trigger="click"
+                hx-target="#parent-div"
+                hx-swap="outerHTML">
+            Click Me!
+        </button>
+    </section>
+</main>
+</body>
+</html>
