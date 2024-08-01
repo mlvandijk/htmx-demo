@@ -21,6 +21,19 @@
             Click Me!
         </button>
     </section>
+
+    <section>
+        <input type="text"
+               name="q"
+               hx-get="/search"
+               hx-trigger="keyup changed delay:500ms"
+               hx-target="#search-results"
+               placeholder="Search..."
+        >
+        <div th:replace="search::results">
+        </div>
+    </section>
+
 </main>
 </body>
 </html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>fragments</title>
+</head>
+<body>
+<div id="search-results" th:fragment="results">
+    <ul th:each="result: ${results}">
+        <li th:text="${result}"></li>
+    </ul>
+</div>
+</body>
+</html>
